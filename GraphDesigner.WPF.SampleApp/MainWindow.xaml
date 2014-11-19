@@ -1,0 +1,49 @@
+﻿<Window x:Class="HFK.GraphDesigner.WPF.SampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="clr-namespace:HFK.GraphDesigner.WPF;assembly=GraphDesigner.WPF"
+        Title="MainWindow" Height="350" Width="644">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110*" />
+            <ColumnDefinition Width="393*" />
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Margin="5" BorderBrush="Black" BorderThickness="1">
+            <StackPanel VerticalAlignment="Stretch"  ScrollViewer.VerticalScrollBarVisibility="Auto" >
+                <GroupBox Header="Create Simple Graph" Margin="2">
+                    <StackPanel>
+                        <Button  Name="btnSimpleXaml" Content="Using Xaml" Margin="2" Click="btnSimpleXaml_Click" />
+                        <Button  Name="btnSimpleInCode" Content="Using Code" Margin="2" Click="btnSimpleInCode_Click" />
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="Customize Graph" Margin="2">
+                    <StackPanel>
+                        <Button  Name="btnCustomByXaml" Content="Using Xaml" Margin="2" Click="btnCustomByXaml_Click" />
+                        <Button  Name="btnCustomByCode" Content="Using Code" Margin="2" Click="btnCustomByCode_Click" />
+                        <Button  Name="btnCustomByInheritance" Content="Using Overriding" Margin="2" Click="btnCustomByInheritance_Click" />
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="Content Template" Margin="2">
+                    <StackPanel>
+                        <Button  Name="btnContentTemplateByXaml" Content="Using Xaml" Margin="2" Click="btnContentTemplateByXaml_Click" />
+                        <Button  Name="btnContentTemplateByCode" Content="Using Code" Margin="2" Click="btnContentTemplateByCode_Click" />
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="Data Template">
+                    <StackPanel>
+                        <Button  Name="btnDataTemplateByXaml" Content="Using Xaml" Margin="2" Click="btnDataTemplateByXaml_Click"/>
+                        <!--<Button  Name="btnDataTemplateByType" Content="By Type" Margin="2" Click="btnDataTemplateByType_Click"/>-->
+                        <Button  Name="btnDataTemplateByCode" Content="Using Code Behind" Margin="2" Click="btnDataTemplateByCode_Click"/>
+                    </StackPanel>
+
+                </GroupBox>
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="1" Margin="5" BorderBrush="Black" BorderThickness="1">
+            <Grid Name="controlContainer" ></Grid>
+        </Border>
+    </Grid>
+</Window>

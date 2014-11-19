@@ -1,0 +1,10 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/GraphDesigner.WPF;component/Themes/ConnectionPoint.xaml" />
+        <ResourceDictionary Source="/GraphDesigner.WPF;component/Themes/GraphDesigner.xaml" />
+        <ResourceDictionary Source="/GraphDesigner.WPF;component/Themes/GraphNode.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

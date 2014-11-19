@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="HFK.GraphDesigner.WPF.SampleApp.Simple.SimpleGraphUsingXaml"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:c="clr-namespace:HFK.GraphDesigner.WPF;assembly=GraphDesigner.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal"  Grid.Row="0">
+            <Button Name="btnAddNode" Click="btnAddNode_Click" >+ node</Button>
+            <Button Name="btnRemoveNode" Click="btnRemoveNode_Click">- node</Button>
+            <Button Name="btnAddConn" Click="btnAddConn_Click">+ conn</Button>
+            <Button Name="btnRemoveConn" Click="btnRemoveConn_Click">- conn</Button>
+        </StackPanel>
+        <c:GraphDesigner x:Name="MyDiagramControl" Grid.Row="1">
+            <c:GraphNode PosX="10" PosY="10" >
+                <c:GraphNode.Content>Test 1</c:GraphNode.Content>
+                <c:ConnectionPoint x:Name="pnt11" Dock="Top"  SomeName="pt11" ></c:ConnectionPoint>
+                <c:ConnectionPoint Dock="Bottom" SomeName="pt12" ></c:ConnectionPoint>
+                <!--<c:GraphNode.Connections>
+                    <c:Connection SourceConnectionPoint="{x:Reference pnt11}" TargetConnectionPoint="{x:Reference pnt21}" />
+                </c:GraphNode.Connections>-->
+            </c:GraphNode>
+            <c:GraphNode PosX="20" PosY="50" >
+                <c:GraphNode.Content>Test 2</c:GraphNode.Content>
+                <c:ConnectionPoint x:Name="pnt21" SomeName="pt21"></c:ConnectionPoint>
+                <c:ConnectionPoint SomeName="pt22"></c:ConnectionPoint>
+            </c:GraphNode>
+        </c:GraphDesigner>
+    </Grid>
+</UserControl>
